@@ -1,0 +1,64 @@
+.loginForm{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.loginForm input{
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 8px;
+    color: black;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    background-color: white !important;  
+    -webkit-appearance: none;
+    appearance: none;
+}
+.loginForm input:hover,.loginForm input:active,.loginForm input:focus{
+    outline: none;
+    border: none;
+}
+.loginForm button{
+    font-family: "Stack Sans Notch", sans-serif;
+    width:100%;
+    border-radius: 8px;
+    padding: 15px 0px;
+    color: var(--white);
+    background-color: var(--orange);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+.loginForm .dec{
+    width: 90%;
+    height: 1px;
+    border-top: 1px solid var(--orange);
+}
+.loginForm p{
+    color: white;
+}
+
+.loginForm input,
+.loginForm input:-webkit-autofill,
+.loginForm input:-webkit-autofill:hover,
+.loginForm input:-webkit-autofill:focus,
+.loginForm input:-webkit-autofill:active {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+
+    background: white !important;
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    box-shadow: 0 0 0 1000px white inset !important;
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    transition: background-color 9999s ease-in-out 0s;
+}

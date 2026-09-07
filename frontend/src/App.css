@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Stack+Sans+Notch:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --black: #000000ff;
+  --prussian-blue: #14213dff;
+  --orange: #fca311ff;
+  --alabaster-grey: #e5e5e5ff;
+  --white: #ffffffff;
+}
+/* @font-face {
+  font-family: "Catliya";
+  src: url("../assets/fonts/Cattleya.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
