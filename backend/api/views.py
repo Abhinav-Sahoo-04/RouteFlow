@@ -2,8 +2,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import viewsets
-from .models import Student,Management,Bus
-from .serializers import StudentSerializer,ManagementSerializer,BusSerializer
+from .models import Student,Management,Bus,Route
+from .serializers import StudentSerializer,ManagementSerializer,BusSerializer,RouteSerializer,BusesSerializer
 from datetime import datetime
 import hashlib
 
@@ -125,6 +125,16 @@ class ManagementRegisterViewset(viewsets.ViewSet):
 
 class RoutesViewset(viewsets.ViewSet):
      def list(self,request):
-        queryset=Bus.objects.all()
-        serializer=BusSerializer(queryset,many=True)
+        queryset=Route.objects.all()
+        serializer=RouteSerializer(queryset,many=True)
+        # print(serializer.data)
         return Response(serializer.data)
+
+class BusesViewset(viewsets.ViewSet):
+     def list(self,request):
+          queryset=Bus.objects.all()
+          serializer=BusesSerializer(queryset,many=True)
+          return Response(serializer.data)
+
+
+        

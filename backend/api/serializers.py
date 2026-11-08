@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import Student,Management,Bus,Route
 
+
+
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model=Student
@@ -11,10 +13,21 @@ class ManagementSerializer(serializers.ModelSerializer):
         model=Management
         fields="__all__"
 
+
+
 class RouteSerializer(serializers.ModelSerializer):
+    is_stop = serializers.ReadOnlyField()
     class Meta:
         model = Route
-        fields = "__all__"
+        fields = [
+            "id",
+            "name",
+            "latitude",
+            "longitude",
+            "order",
+            "is_stop",
+        ]
+
 
 
 class BusSerializer(serializers.ModelSerializer):
@@ -22,3 +35,8 @@ class BusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bus
         fields = "__all__"
+
+class BusesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Bus
+        fields="__all__"

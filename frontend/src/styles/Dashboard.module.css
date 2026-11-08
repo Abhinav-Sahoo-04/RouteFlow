@@ -1,5 +1,6 @@
 .dashboardContainer{
-    height: 100vh;
+    min-height: 150vh;
+    height: 150vh;
     width: 100%;
     background-image: url("dash2.jpg");
     background-size: cover;
@@ -92,7 +93,7 @@
     width: 100%;
     padding: 5px;
     border-radius: 8px;
-    background-color: white;
+    background-color: transparent;
 }
 @media screen and (max-width: 768px) {
   .dashboardContainer{

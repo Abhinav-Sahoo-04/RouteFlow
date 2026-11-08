@@ -13,13 +13,26 @@ SEM = (
 )
 
 
+
+from django.db import models
+
+
 class Route(models.Model):
-    name = models.CharField(max_length=100)
-    latitude = models.CharField(max_length=100)
-    longitude = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, blank=True, default="")
+    latitude = models.DecimalField(max_digits=10, decimal_places=6)
+    longitude = models.DecimalField(max_digits=10, decimal_places=6)
+    order = models.PositiveIntegerField(default=0)
+
+    @property
+    def is_stop(self):
+        return bool(self.name.strip())
 
     def __str__(self):
-        return self.name
+        return self.name or f"Waypoint {self.order}"
+    
+    class Meta:
+        ordering = ["order"]
+
 
 
 class Bus(models.Model):
@@ -30,7 +43,7 @@ class Bus(models.Model):
         Route,
        
         blank=True,
-        null=True
+
     )
 
     def __str__(self):

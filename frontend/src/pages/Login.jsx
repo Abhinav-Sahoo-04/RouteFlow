@@ -6,6 +6,8 @@ import StudentLogin from "../Components/StudentLogin";
 import ManagementLogin from "../Components/ManagementLogin";
 import Register from "../Components/Register";
 import ManagementRegister from "../Components/ManagementRegister";
+import AddDrops from "./AddDrops";
+import Home from "./Home";
 export default function Login() {
 
   
@@ -44,9 +46,11 @@ export default function Login() {
         </div>
         <Routes>
           <Route path="/" element={<StudentLogin />}/>
+          <Route path="/homepage" element={<Home />}/>
           <Route path="/management" element={<ManagementLogin />}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/managementRegister" element={<ManagementRegister/>}/>
+          <Route path="/drops" element={<AddDrops/>}/>
         </Routes>
       </div>
     </div>

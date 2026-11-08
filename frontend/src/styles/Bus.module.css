@@ -1,0 +1,29 @@
+.Bus{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+.busCard{
+    height: fit-content;
+    width: 100%;
+    min-height: 50px;
+    padding: 5px;
+    flex-shrink: none;
+    border-radius:8px ;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 40px;
+    border: 1px solid grey;
+
+}
+.busCard i{
+    color: orange;
+    font-size: 35px;
+}

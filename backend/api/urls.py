@@ -9,6 +9,7 @@ router.register("manage",views.LoginManageViewset,basename="management")
 router.register("register",views.RegisterViewset,basename="register")
 router.register("managementRegister",views.ManagementRegisterViewset,basename="Managementregister")
 router.register("route",views.RoutesViewset,basename="route")
+router.register("buses",views.BusesViewset,basename="buses")
 urlpatterns = [
    path('v1/',include(router.urls))
 ]
